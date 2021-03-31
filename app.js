@@ -3,7 +3,7 @@ const mailchimp=require("@mailchimp/mailchimp_marketing");
 
 const express=require("express");
 
-const http=require("http");
+const https=require("https");
 const app=express();
 
 app.use(express.urlencoded({extended:true}));
@@ -16,7 +16,7 @@ app.get("/",function(req,res){
 
 
 mailchimp.setConfig({
-  apiKey:"a015bce97196481de4e3a9a2a5a10a0f-us1",
+  apiKey:"aab8145bf532d659476ea45d958127cc-us1",
   server:"us1"
 });
 
@@ -38,7 +38,7 @@ const run= async() => {
     status:"subscribed",
     merge_fields:{
       FNAME:data.fName,
-      LName:data.lName
+      LNAME:data.lName
     }
   });
     res.sendFile(__dirname+"/success.html");
