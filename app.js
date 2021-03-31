@@ -16,8 +16,8 @@ app.get("/",function(req,res){
 
 
 mailchimp.setConfig({
-  apiKey:"aab8145bf532d659476ea45d958127cc-us1",
-  server:"us1"
+  apiKey:"YOUR API KEY HERE",
+  server:"usX"                      //X- last character of API KEY
 });
 
 
@@ -25,7 +25,7 @@ app.post("/",function(req,res){
   const fName=req.body.x;
   const lName=req.body.y;
   const email=req.body.z;
-  const listId="4b52020b84";
+  const listId="YOUR LIST ID";
 const data={
   fName:fName,
   lName:lName,
